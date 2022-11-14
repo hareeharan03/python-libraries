@@ -48,3 +48,26 @@ def distance(ed1,ed2):
     else:
       result = "entered number exceed the limit 360 degree"
   return result
+
+
+def HSV_distance(cc1,cc2):
+  """
+  calculate the distance between given HSV colour code
+  Arguments:
+      a: an list
+      b: an list
+  Returns:
+      The distance between colour code
+  """
+  if len(cc1) == 3 and len(cc2) == 3:
+    if (cc1[0] < 361) and (cc2[0] < 361) and (cc1[1] < 101) and (cc2[1] < 101) and (cc1[2] < 101) and (cc2[2] < 101):
+      forward = np.sqrt(np.square(cc2[0] - cc1[0]) + (np.square(cc2[1] - cc1[1])) + (np.square(cc2[2] - cc1[2])))
+      maximun = max(cc1[0],cc2[0])
+      minimun = min(cc1[0],cc2[0])
+      backword = np.sqrt(np.square((((360 - (abs(maximun))) + minimun)) + (np.square(cc2[1] - cc1[1])) + (np.square(cc2[2] - cc1[2]))))
+      lowest_distance=int(min(backword,forward))
+    else:
+      lowest_distance="entered colour code is not valid"
+  else:
+    lowest_distance="entered colour code is not in correct length"
+  return (lowest_distance)
