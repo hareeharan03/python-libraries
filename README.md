@@ -11,12 +11,11 @@ from curved_surface_distance import distance
 
 ### HSV_distance
 
-- HSV_distance is used to Calculate the distance between the HSV color codes.
+ - HSV_distance is used to Calculate the distance between the HSV color codes.
 
-- H represents Hue ranges from 0 to 360, S represents Saturation and V represents Value(brightness) both ranges from 0 to 100. 
-    syntax  -   distance.HSV_distance([H1,S1,V1],[H2,S2,V2])
-    -
-    example -   distance.HSV_distance([0,0,0],[360,100,100]) 
+ - H represents Hue ranges from 0 to 360, S represents Saturation and V represents Value(brightness) both ranges from 0 to 100. 
+    - syntax  -   distance.HSV_distance([H1,S1,V1],[H2,S2,V2])
+    - example -   distance.HSV_distance([0,0,0],[360,100,100]) 
     
 ### distance
 
